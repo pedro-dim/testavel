@@ -8,7 +8,19 @@ use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
 {
-    public function send(){
+
+
+
+
+
+    /**
+     * Envia um email de teste utilizando filas de processamento
+     * @param TestMail New TestMail instance
+     * @return type
+     * @throws conditon 
+     **/
+  
+    public function sendMail(){
 
         Mail::to('pedro@test.com')->send(new TestMail());
 
